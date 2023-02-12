@@ -11,6 +11,16 @@
 
     </style>
 
+    <style name="ContainerFormCadastro">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">320dp</item>
+        <item name="android:background">@drawable/card_components</item>
+        <item name="android:layout_below">@id/textLogin</item>
+        <item name="android:layout_margin">20dp</item>
+        <item name="android:padding">8dp</item>
+
+    </style>
+
     <style name="InputTextFormLogin">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -19,6 +29,7 @@
         <item name="android:layout_marginStart">20dp</item>
         <item name="android:layout_marginEnd">20dp</item>
         <item name="android:layout_marginTop">20dp</item>
+        <item name="android:maxLength">30</item>
     </style>
 
     <style name="ButtonLogin">

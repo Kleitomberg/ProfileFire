@@ -6,4 +6,8 @@
     <string name="fazer_login">Fazer login</string>
     <string name="senha">Senha</string>
     <string name="email">Email</string>
+    <string name="criar_new_conta">Criar conta</string>
+    <string name="username">Username</string>
+    <string name="j_tem_uma_conta">Já tem uma conta?</string>
+    <string name="fazer_login_">Fazer login</string>
 </resources>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:layout_centerVertical="true"
+    android:layout_centerHorizontal="true"
+    tools:context=".CadastroActivity">
+
+    <TextView
+        android:id="@+id/criar_new_conta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        android:text="@string/criar_new_conta"
+        android:textColor="@color/white"
+        android:textSize="26sp" />
+
+    <View
+        android:id="@+id/viewCadastro"
+        style="@style/ContainerFormCadastro"
+        android:layout_below="@+id/criar_new_conta" />
+
+    <EditText
+
+        android:id="@+id/input_username"
+        android:inputType="text"
+        style="@style/InputTextFormLogin"
+        android:layout_alignStart="@id/viewCadastro"
+        android:layout_alignTop="@id/viewCadastro"
+        android:layout_alignEnd="@id/viewCadastro"
+        android:drawableRight="@drawable/baseline_person_24"
+        android:hint="@string/username" />
+
+    <EditText
+
+        android:id="@+id/input_email"
+        style="@style/InputTextFormLogin"
+        android:layout_below="@+id/input_username"
+
+        android:layout_alignStart="@id/viewCadastro"
+
+        android:layout_alignEnd="@id/viewCadastro"
+        android:drawableRight="@drawable/ic_email"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/input_senha"
+        style="@style/InputTextFormLogin"
+        android:layout_below="@+id/input_email"
+        android:layout_alignStart="@id/viewCadastro"
+        android:layout_alignEnd="@id/viewCadastro"
+        android:drawableRight="@drawable/ic_eye"
+        android:hint="@string/senha"
+        android:inputType="textPassword" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_cadastro"
+        style="@style/ButtonLogin"
+        android:layout_below="@+id/input_senha"
+        android:layout_alignStart="@id/viewCadastro"
+        android:layout_alignEnd="@id/viewCadastro"
+        android:text="@string/criar_new_conta" />
+
+    <ProgressBar
+        android:id="@+id/progrressBarC"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/new_login"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/textcomconta"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewCadastro"
+        android:gravity="center"
+        android:text="@string/j_tem_uma_conta"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/new_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textcomconta"
+        android:gravity="center"
+        android:text="@string/fazer_login_"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
+</androidx.core.widget.NestedScrollView>
