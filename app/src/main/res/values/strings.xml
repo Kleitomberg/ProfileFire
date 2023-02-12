@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ProfileFire</string>
+    <string name="fa_a_seu_login">Faça seu login</string>
+    <string name="n_o_tem_uma_conta">Não tem uma conta?</string>
+    <string name="criar_conta">Criar conta!</string>
+    <string name="fazer_login">Fazer login</string>
+    <string name="senha">Senha</string>
+    <string name="email">Email</string>
+</resources>
