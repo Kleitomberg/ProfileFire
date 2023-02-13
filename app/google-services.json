@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "398466190176",
+    "project_id": "profilefireapp",
+    "storage_bucket": "profilefireapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:398466190176:android:c93c8c2e86f468afd2ac05",
+        "android_client_info": {
+          "package_name": "br.dev.android.profilefire"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "398466190176-gjj7kal1ktctssc1qev14kb0fd18i5bo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNXa2zb8sjJ_oJiMGYhtE79nYWCtkMHpE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "398466190176-gjj7kal1ktctssc1qev14kb0fd18i5bo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
