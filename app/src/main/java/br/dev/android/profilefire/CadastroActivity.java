@@ -24,6 +24,7 @@ import com.google.firebase.auth.FirebaseAuthEmailException;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -92,6 +93,13 @@ public class CadastroActivity extends AppCompatActivity  {
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        redirectLogin();
+    }
+
     private void cadastrarUser(String nome, String email, String senha, View v){
 
         FirebaseAuth.getInstance().createUserWithEmailAndPassword(email,senha).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -104,6 +112,9 @@ public class CadastroActivity extends AppCompatActivity  {
                     snackbar.setBackgroundTint(Color.GREEN);
                     snackbar.setTextColor(Color.WHITE);
                     snackbar.show();
+
+                    redirectLogin();
+
 
                 }else{
                     String errors;
@@ -163,6 +174,15 @@ public class CadastroActivity extends AppCompatActivity  {
 
 
 
+    }
+
+    private void redirectLogin(){
+        FirebaseUser usuarioLogado = FirebaseAuth.getInstance().getCurrentUser();
+
+        if (usuarioLogado != null){
+            Intent intent = new Intent(CadastroActivity.this, LoginActivity.class);
+            startActivity(intent);
+        }
     }
     private void startComponents(){
         this.toLogin = findViewById(R.id.new_login);

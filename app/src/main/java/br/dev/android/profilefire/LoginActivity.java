@@ -52,13 +52,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onStart() {
         super.onStart();
+        telaprincipal();
 
-        FirebaseUser usuarioLogado = FirebaseAuth.getInstance().getCurrentUser();
 
-        if (usuarioLogado != null){
-            telaprincipal();
 
-        }
     }
 
     @Override
@@ -129,9 +126,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void telaprincipal(){
-        Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
-        startActivity(intent);
-        finish();
+        FirebaseUser usuarioLogado = FirebaseAuth.getInstance().getCurrentUser();
+
+        if (usuarioLogado != null){
+            Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
+            startActivity(intent);
+        }
 
     }
 

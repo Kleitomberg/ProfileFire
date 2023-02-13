@@ -33,17 +33,18 @@
         android:layout_marginTop="16dp"
         android:gravity="center"
         android:layout_below="@id/container_user_profile"
-        android:text="Username"
+        android:text="@string/username_text"
         android:layout_height="wrap_content"/>
 
     <TextView
+        android:id="@+id/emails_user_text"
         android:layout_width="match_parent"
         android:textSize="18dp"
         android:textColor="@color/white"
         android:layout_marginTop="4dp"
         android:gravity="center"
         android:layout_below="@id/usernameText"
-        android:text="Username@gmail.cim"
+        android:text="@string/username_gmail_cim"
         android:layout_height="wrap_content"/>
 
     <androidx.appcompat.widget.AppCompatButton

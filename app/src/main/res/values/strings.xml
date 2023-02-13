@@ -11,4 +11,6 @@
     <string name="j_tem_uma_conta">Já tem uma conta?</string>
     <string name="fazer_login_">Fazer login</string>
     <string name="sair">Sair</string>
+    <string name="username_gmail_cim">Username@gmail.cim</string>
+    <string name="username_text">Username</string>
 </resources>
