@@ -1,7 +1,7 @@
 
 
 <div  align="center">
-<img style="width:155px;" align="center" src="https://github.com/Kleitomberg/IdadeEmMinutos/blob/master/app/src/main/res/drawable/idade.png"/>
+<img style="width:155px;" align="center" src="https://github.com/Kleitomberg/ProfileFire/blob/master/app/src/main/res/drawable/lg.png"/>
 </div>
 
 <div  align="center">
