@@ -53,9 +53,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onStart() {
         super.onStart();
         telaprincipal();
-
-
-
     }
 
     @Override

@@ -96,7 +96,6 @@ public class CadastroActivity extends AppCompatActivity  {
     @Override
     protected void onResume() {
         super.onResume();
-
         redirectLogin();
     }
 
@@ -184,6 +183,7 @@ public class CadastroActivity extends AppCompatActivity  {
             startActivity(intent);
         }
     }
+
     private void startComponents(){
         this.toLogin = findViewById(R.id.new_login);
         this.inputEmail = findViewById(R.id.input_email);

@@ -1,106 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:fillViewport="true">
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_gradient"
+        tools:context=".LoginActivity">
 
-    android:layout_height="match_parent"
-    android:background="@drawable/bg_gradient"
-    tools:context=".LoginActivity">
+        <ImageView
+            android:id="@+id/logo_login"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="36dp"
+            android:contentDescription="logo"
+            android:src="@drawable/lg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:contentDescription="logo"
-        android:id="@+id/logo_login"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="36dp"
-        android:src="@drawable/lg" />
+        <TextView
+            android:id="@+id/textLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logo_login"
+            android:gravity="center"
+            android:text="@string/fa_a_seu_login"
 
-    <TextView
-        android:id="@+id/textLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/logo_login"
-        android:gravity="center"
-        android:text="@string/fa_a_seu_login"
-        android:textColor="#fff"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/logo_login" />
 
-    <View
-        android:id="@+id/viewFormLogin"
-        style="@style/ContainerFormLogin" />
+        <View
+
+            android:id="@+id/viewFormLogin"
+            style="@style/ContainerFormLogin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textLogin" />
 
 
-    <EditText
+        <EditText
 
-        android:id="@+id/input_email"
-        android:inputType="textEmailAddress"
-        style="@style/InputTextFormLogin"
-        android:layout_alignStart="@id/viewFormLogin"
-        android:layout_alignTop="@id/viewFormLogin"
-        android:layout_alignEnd="@id/viewFormLogin"
-        android:drawableRight="@drawable/ic_email"
-        android:hint="@string/email" />
+            android:id="@+id/input_email"
+            style="@style/InputTextFormLogin"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="20dp"
+            android:drawableEnd="@drawable/ic_email"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="@+id/viewFormLogin"
 
-    <EditText
-        android:inputType="textPassword"
-        android:id="@+id/input_senha"
-        style="@style/InputTextFormLogin"
-        android:layout_below="@+id/input_email"
-        android:layout_alignStart="@id/viewFormLogin"
-        android:layout_alignEnd="@id/viewFormLogin"
-        android:drawableRight="@drawable/ic_eye"
-        android:hint="@string/senha" />
+            app:layout_constraintStart_toStartOf="@+id/viewFormLogin"
+            app:layout_constraintTop_toTopOf="@+id/viewFormLogin" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_login"
-        style="@style/ButtonLogin"
-        android:layout_below="@+id/input_senha"
-        android:layout_alignStart="@id/viewFormLogin"
-        android:layout_alignEnd="@id/viewFormLogin"
-        android:text="@string/fazer_login" />
+        <EditText
+            android:id="@+id/input_senha"
+            style="@style/InputTextFormLogin"
+            android:layout_below="@+id/input_email"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="10dp"
+            android:drawableEnd="@drawable/ic_eye"
+            android:hint="@string/senha"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="@+id/viewFormLogin"
+
+            app:layout_constraintStart_toStartOf="@+id/viewFormLogin"
+            app:layout_constraintTop_toBottomOf="@+id/input_email" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_login"
+            style="@style/ButtonLogin"
+            android:layout_marginStart="30dp"
+
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/fazer_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_senha" />
 
         <ProgressBar
+
             android:id="@+id/progrressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/new_conta"
-            android:layout_centerHorizontal="true"
+
             android:layout_marginStart="14dp"
             android:layout_marginTop="14dp"
             android:layout_marginEnd="14dp"
+
             android:layout_marginBottom="14dp"
             android:indeterminateTint="@color/white"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/new_conta" />
 
-    <TextView
-        android:id="@+id/textsemconta"
+        <TextView
+            android:id="@+id/textsemconta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/viewFormLogin"
-        android:gravity="center"
-        android:text="@string/n_o_tem_uma_conta"
-        android:textSize="16sp" />
+            android:gravity="center"
+            android:text="@string/n_o_tem_uma_conta"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/viewFormLogin" />
 
-    <TextView
-        android:id="@+id/new_conta"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textsemconta"
-        android:gravity="center"
-        android:text="@string/criar_conta"
-        android:textSize="16sp"
+        <TextView
+            android:id="@+id/new_conta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/criar_conta"
+            android:textSize="16sp"
+            android:textStyle="bold"
 
-        android:textStyle="bold" />
+            app:layout_constraintTop_toBottomOf="@+id/textsemconta" />
 
 
-</RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

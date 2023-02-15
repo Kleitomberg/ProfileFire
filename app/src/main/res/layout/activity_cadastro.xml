@@ -35,6 +35,7 @@
 
         android:id="@+id/input_username"
         android:inputType="text"
+        android:layout_margin="20dp"
         style="@style/InputTextFormLogin"
         android:layout_alignStart="@id/viewCadastro"
         android:layout_alignTop="@id/viewCadastro"
@@ -45,8 +46,12 @@
     <EditText
 
         android:id="@+id/input_email"
+
         style="@style/InputTextFormLogin"
         android:layout_below="@+id/input_username"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+
 
         android:layout_alignStart="@id/viewCadastro"
 
@@ -58,6 +63,10 @@
     <EditText
         android:id="@+id/input_senha"
         style="@style/InputTextFormLogin"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+
         android:layout_below="@+id/input_email"
         android:layout_alignStart="@id/viewCadastro"
         android:layout_alignEnd="@id/viewCadastro"
